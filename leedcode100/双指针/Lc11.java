@@ -2,12 +2,7 @@ package leedcode100.双指针;
 
 import java.util.Scanner;
 
-/**
- * author peng
- * description
- * date 2025/2/22
- */
-public class lc11 {
+public class Lc11 {
     public static int maxArea(int[] height) {
         int res = 0;
         int left = 0;

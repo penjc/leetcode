@@ -4,11 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * author peng
- * description
- * date 2025/2/21
- */
 public class lc1 {
     public static int[] twoSum(int[] nums, int target) {
         int res[] = new int[2];

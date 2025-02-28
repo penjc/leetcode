@@ -1,10 +1,5 @@
 package leedcode100.哈希;
 
-/**
- * author peng
- * description
- * date 2025/2/21
- */
 import java.util.*;
 
 public class lc49 {

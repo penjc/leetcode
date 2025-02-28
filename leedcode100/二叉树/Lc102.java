@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-class lc102 {
+class Lc102 {
     public static class TreeNode {
         int val;
         TreeNode left;
