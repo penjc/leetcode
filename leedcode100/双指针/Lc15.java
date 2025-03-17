@@ -2,6 +2,31 @@ package leedcode100.双指针;
 
 import java.util.*;
 
+/**
+ * 15. 三数之和
+ * 题目描述：
+ *      本题要求找到数组 nums 中所有和为 0 的三元组 [nums[i], nums[j], nums[k]]，并确保：
+ *      不能有重复三元组
+ *      i, j, k 互不相同
+ *      最终返回的结果不能有重复的组合
+ * 解题思路：
+ *      排序 nums：确保数组有序，方便去重。
+ *      遍历数组：
+ *          固定 nums[i] 作为三元组的第一个元素；
+ *          在 nums[i+1] 到 nums[n-1] 之间，使用双指针 left 和 right 查找两个数，使它们的和等于 -nums[i]。
+ *      双指针查找
+ *          计算 nums[i] + nums[left] + nums[right] 的值：
+ *          如果和为 0：记录结果，并跳过重复元素。
+ *          如果和小于 0：left++（需要更大的数）。
+ *          如果和大于 0：right--（需要更小的数）。
+ *      去重处理
+ *          外层循环：如果 nums[i] == nums[i-1]，则跳过（避免重复的三元组）。
+ *          内层指针移动：当 nums[left] == nums[left+1] 或 nums[right] == nums[right-1]，继续移动指针。
+ * 复杂度分析
+ * 排序 O(n log n)
+ * 遍历 + 双指针查找 O(n²)
+ * 总体复杂度 O(n²)
+ */
 public class Lc15 {
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

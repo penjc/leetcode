@@ -22,9 +22,15 @@ public class Lc226 {
 
     public TreeNode invertTree(TreeNode root) {
         if (root == null) return null;
-        TreeNode temp = root.left;
-        root.left = invertTree(root.right);
-        root.right = invertTree(temp);
+
+        // 递归翻转左右子树
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
+
+        // 交换
+        root.left = right;
+        root.right = left;
+
         return root;
     }
 
