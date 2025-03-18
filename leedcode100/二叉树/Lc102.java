@@ -4,19 +4,22 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 102. 二叉树的层序遍历
+ * 题目描述：
+ *      给你一个二叉树，请你返回其按 层序遍历 得到的节点值。
+ *      （即逐层地，从左到右访问所有节点）。
+ * 解题思路：
+ *      使用队列实现广度优先搜索
+ *      从根节点开始，将根节点加入队列
+ *      当队列不为空时，循环以下操作：
+ *          记录当前层的节点数量 levelSize
+ *          创建一个列表 currentLevel，用于存储当前层的节点值
+ *          遍历 levelSize 次，将当前层的节点加入 currentLevel
+ *          将当前层的节点值加入结果列表 result
+ *      返回结果列表
+ */
 class Lc102 {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
