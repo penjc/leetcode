@@ -51,7 +51,6 @@ public class Lc25 {
     }
 
     public ListNode reverseKGroup2(ListNode head, int k) {
-        // 统计节点个数
         int n = 0;
         for (ListNode cur = head; cur != null; cur = cur.next) {
             n++;
@@ -77,7 +76,18 @@ public class Lc25 {
             p0.next = pre;
             p0 = nxt;
         }
+/**
+ * 处理剩余不足 k 个的部分(如果剩余不足 k 个也要翻转)
+ */
+//        pre = null;
+//        for(int i =0;i<n;i++){
+//            ListNode nxt = cur.next;
+//            cur.next = pre;
+//            pre = cur;
+//            cur = nxt;
+//        }
+//        p0.next = pre;
+
         return dummy.next;
     }
-
 }
