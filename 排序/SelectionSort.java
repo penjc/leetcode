@@ -6,6 +6,7 @@ package 排序;
  * 空间复杂度：O(1)
  * 稳定性：不稳定
  * 原理：
+ *      从未排序区间中找到最小（大）元素，放到已排序区间的末尾
  */
 public class SelectionSort {
     public static void selectionSort(int[] arr) {
